@@ -34,10 +34,7 @@ CREATE TABLE ep1(
        END;
        /
 ```
-
-
 ## Output:
-![Creating procedures](https://github.com/Jeevapriya14/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/121003043/be934143-f0ce-4bdd-a0f4-e40ef075f092)
-
+![Screenshot 2023-10-04 142816](https://github.com/deepikasrinivasans/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/119393935/dc417f85-76c6-465a-af95-fa310be0ee78)
 ## Result:
 Thus the procedure has been sucessfully created in Pl/SQL.
