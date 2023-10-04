@@ -12,29 +12,30 @@
 
 ## Program:
 ```
-CREATE TABLE ep1(
-       empid NUMBER,
-       empname VARCHAR(10),
-       dept VARCHAR(10),
-       salary NUMBER
-       );
-       CREATE OR REPLACE PROCEDURE emp_data AS
-       BEGIN
-       INSERT INTO ep1(empid,empname,dept,salary)
-       values(1,'Swetha','MD',10000000);
-       INSERT INTO ep1(empid,empname,dept,salary)
-       values(2,'Anitha','HR',500000);
-       INSERT INTO ep1(empid,empname,dept,salary)
-       values(3,'Divya','IT',200000);
-       COMMIT;
-       FOR emp_rec IN (SELECT * FROM ep1)LOOP
-       DBMS_OUTPUT.PUT_LINE('EMPLOYEE ID:'||emp_rec.empid||',EMPLOYEE NAME:'|| emp_rec.empname||
-       ',DEPARTMENT:'||emp_rec.dept||',SALARY:'||emp_rec.salary);
-       END LOOP;
-       END;
-       /
+ create or replace procedure insert_emp_data AS
+  2  begin
+  3  insert into employeebl1 (Empid,Empname,Dept,Salary)
+  4  values(1,'DEEPIKA','FINANCE',190000);
+  5  insert into employeebl1 (Empid,Empname,Dept,Salary)
+  6  values(2,'MIKE','MD',350000);
+  7  insert into employeebl1 (Empid,Empname,Dept,Salary)
+  8  values(3,'RAM','HR',750000);
+  9  commit;
+ 10  end;
+ 11  /
+
+Procedure created.
+
+SQL> begin
+  2  insert_emp_data;
+  3  end;
+  4  /
+
+PL/SQL procedure successfully completed.
 ```
 ## Output:
-![Screenshot 2023-10-04 142816](https://github.com/deepikasrinivasans/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/119393935/dc417f85-76c6-465a-af95-fa310be0ee78)
+![dbmsexp4new](https://github.com/deepikasrinivasans/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/119393935/fff493e7-968b-4903-9847-0b9aa28fb448)
+![dbmsexp42newout](https://github.com/deepikasrinivasans/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/119393935/024ddaff-6bca-4b23-8fec-5031699524bb)
+
 ## Result:
 Thus the procedure has been sucessfully created in Pl/SQL.
